@@ -83,3 +83,51 @@ a:hover {
   right: 0;
   z-index: 0; /* displays image below text, if they ever overlap */
 }
+
+/* Mobile: stack as column */
+@media (max-width: 768px) {
+
+  /* Stack categories vertically */
+  .main-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .link-container {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .list .link a {
+    font-size: 1.1rem;
+  }
+
+  /* Move image BELOW the grid */
+
+  .dateTime {
+    order: 1;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-container {
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  .image {
+    order: 3;
+    margin-top: 10rem;
+  }
+}
